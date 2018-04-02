@@ -22,9 +22,9 @@ output directory.
 Since this is a shell script, you can run it from your favorite language easily.
 For example, in python:
 
+```python
 # train.py
 
-```python
 import subprocess
 
 output_dir = '/path/to/experiment/directory'
