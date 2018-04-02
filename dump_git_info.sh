@@ -8,10 +8,10 @@
 # Writes the following files to output_dir:
 #
 # git-status.txt: Output of git status -sb.
-# git-log.txt   : Output of
+# git-log.txt: Output of
 #     git log --graph --pretty='format:%h -%d %s (%cd) <%an>'
-# git-diff.txt  : Output of git diff --patch --color=never
-# git-head.txt  : Output of git rev-parse HEAD
+# git-diff.patch: Output of git diff --patch --color=never
+# git-head.txt: Output of git rev-parse HEAD
 
 function usage {
     echo "Usage: "
