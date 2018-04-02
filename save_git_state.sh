@@ -25,6 +25,8 @@ if [[ "$#" != 1 ]] && [[ "$#" != 2 ]] ; then
 fi
 
 OUTPUT_DIR=$(readlink -f "$1")
+mkdir -p ${OUTPUT_DIR}
+
 if [[ "$#" == 2 ]] ; then
     cd "$2"
 fi
