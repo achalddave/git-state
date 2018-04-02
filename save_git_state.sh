@@ -2,8 +2,8 @@
 # Save current git diff, log, status to output directory.
 #
 # Example usage:
-#   ./dump_git_info.sh /path/to/output/directory/
-#   ./dump_git_info.sh /path/to/output/directory/ /path/to/git/repo/
+#   ./save_git_info.sh /path/to/output/directory/
+#   ./save_git_info.sh /path/to/output/directory/ /path/to/git/repo/
 #
 # Writes the following files to output_dir:
 #
