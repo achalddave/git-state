@@ -17,7 +17,7 @@ fi
 
 git_state_dir=$(readlink -f "$1")
 git_repo=$(readlink -f "$2")
-output_git_repo=$(readlink -f "$3")
+output_git_repo=$(readlink -m "$3")
 
 if [[ -d "${output_git_repo}" ]] ; then
     echo "Output directory (${output_git_repo}) is not empty" >&2
