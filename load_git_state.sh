@@ -29,7 +29,7 @@ elif [[ ! -f "${git_state_dir}/git-diff.patch" ]] ; then
     error "Could not find git-diff.patch in ${git_state_dir}"
 fi
 
-if [[ ! -d "${git_repo}/.git" ]] ; then
+if [[ ! -e "${git_repo}/.git" ]] ; then
     error "${git_repo} is not a git repo."
 fi
 
