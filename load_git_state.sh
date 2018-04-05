@@ -20,8 +20,7 @@ git_repo=$(readlink -f "$2")
 output_git_repo=$(readlink -m "$3")
 
 if [[ -d "${output_git_repo}" ]] ; then
-    echo "Output directory (${output_git_repo}) is not empty" >&2
-    exit 1
+    error "Output directory (${output_git_repo}) is not empty"
 fi
 
 if [[ ! -f "${git_state_dir}/git-head.txt" ]] ; then
