@@ -34,15 +34,15 @@ if [[ ! -e "${git_repo}/.git" ]] ; then
 fi
 
 cd ${git_repo}
-git worktree add --detach ${output_git_repo} >/dev/null 2>&1
+git worktree add --detach ${output_git_repo} >/dev/null
 
 cd ${output_git_repo}
 
 commit_id=$(cat ${git_state_dir}/git-head.txt)
-git checkout ${commit_id} >/dev/null 2>&1
+git checkout ${commit_id} >/dev/null
 echo "=> Checked out ${commit_id}"
 
-git apply ${git_state_dir}/git-diff.patch >/dev/null 2>&1
+git apply ${git_state_dir}/git-diff.patch >/dev/null
 echo "=> Applied git diff patch"
 
 echo "Git state is loaded and ready at ${output_git_repo}"
