@@ -14,7 +14,7 @@ git repository:
 
 Optionally, you can specify the path to a git repository:
 
-    ./save_git_state.sh /path/to/output/directory /path/to/git/repo
+    ./save_git_state.sh /path/to/output/git/state /path/to/git/repo
 
 See [`dump_git_info.sh`](./dump_git_info.sh) for the list of files saved to the
 output directory.
