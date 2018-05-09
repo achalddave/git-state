@@ -29,11 +29,11 @@ elif [[ ! -f "${git_state_dir}/git-diff.patch" ]] ; then
     error "Could not find git-diff.patch in ${git_state_dir}"
 fi
 
-if [[ ! -e "${git_repo}/.git" ]] ; then
+cd ${git_repo}
+if [[ ! -d ".git" ]] && ! git rev-parse --git-dir >/dev/null 2>&1 ; then
     error "${git_repo} is not a git repo."
 fi
 
-cd ${git_repo}
 git worktree add --detach ${output_git_repo} >/dev/null
 
 cd ${output_git_repo}
