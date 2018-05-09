@@ -15,9 +15,9 @@ if [[ "$#" < 3 ]] ; then
     error $(usage)
 fi
 
-git_state_dir=$(readlink -f "$1")
-git_repo=$(readlink -f "$2")
-output_git_repo=$(readlink -m "$3")
+git_state_dir=$(readlink -f "$1" || error "$1 does not exist.")
+git_repo=$(readlink -f "$2" || error "$2 does not exist.")
+output_git_repo=$(readlink -m "$3" || error "$3 does not exist.")
 
 if [[ -d "${output_git_repo}" ]] ; then
     error "Output directory (${output_git_repo}) is not empty"
