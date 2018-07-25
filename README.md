@@ -16,7 +16,7 @@ Optionally, you can specify the path to a git repository:
 
     ./save_git_state.sh /path/to/output/git/state /path/to/git/repo
 
-See [`dump_git_info.sh`](./dump_git_info.sh) for the list of files saved to the
+See [`save_git_state.sh`](./save_git_state.sh) for the list of files saved to the
 output directory.
 
 Since this is a shell script, you can run it from your favorite language easily.
@@ -28,7 +28,7 @@ For example, in python:
 import subprocess
 
 output_dir = '/path/to/experiment/directory'
-subprocess.call(['./dump_git_info.sh', output_dir])
+subprocess.call(['./save_git_state.sh', output_dir])
 
 # ...
 # Run your code
